@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed-dim": "#c4c6cd", "on-tertiary": "#ffffff", "error-container": "#ffdad6", "inverse-primary": "#c7c6ca", "tertiary-fixed-dim": "#c4c6cd", "surface-bright": "#faf9f7", "surface-container-highest": "#e3e2e0", "inverse-on-surface": "#f1f1ef", "surface-container": "#efeeec", "outline": "#76777b", "surface-container-high": "#e9e8e6", "tertiary": "#000000", "on-error-container": "#93000a", "primary-container": "#1a1b1f", "on-error": "#ffffff", "background": "#faf9f7", "on-tertiary-fixed": "#181c21", "outline-variant": "#c7c6cb", "secondary-fixed": "#e0e2ea", "primary-fixed": "#e3e2e6", "on-primary": "#ffffff", "tertiary-fixed": "#e0e2e9", "surface-tint": "#5e5e62", "primary-fixed-dim": "#c7c6ca", "on-surface-variant": "#46474a", "tertiary-container": "#181c21", "on-primary-fixed-variant": "#46464a", "on-secondary-fixed": "#191c21", "on-background": "#1a1c1b", "on-tertiary-fixed-variant": "#44474c", "on-tertiary-container": "#81848a", "secondary": "#5b5e65", "error": "#ba1a1a", "on-secondary": "#ffffff", "surface": "#faf9f7", "surface-variant": "#e3e2e0", "surface-container-lowest": "#ffffff", "on-primary-container": "#848387", "surface-container-low": "#f4f3f1", "primary": "#000000", "on-primary-fixed": "#1a1b1f", "on-surface": "#1a1c1b", "secondary-container": "#e0e2ea", "on-secondary-fixed-variant": "#44474d", "on-secondary-container": "#61646b", "surface-dim": "#dadad8", "inverse-surface": "#2f3130" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "margin-lg": "3rem", "gutter": "1.25rem", "space-xs": "0.25rem", "space-md": "1rem", "space-xl": "2.5rem", "gutter-lg": "2rem", "space-lg": "1.5rem", "margin": "1.25rem" }, fontFamily: { "headline-lg": ["Newsreader"], "label-lg": ["Manrope"], "headline-lg-mobile": ["Newsreader"], "body-lg": ["Manrope"], "label-md": ["Manrope"], "headline-sm": ["Newsreader"], "body-sm": ["Manrope"], "display-lg-mobile": ["Newsreader"], "headline-md": ["Newsreader"], "display-lg": ["Newsreader"], "label-sm": ["Manrope"], "body-md": ["Manrope"] }, fontSize: { "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "400" }], "display-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Aura Finance Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDwwj2TizT090YodXBkDiUMB7PcOZTi-c4LOK5xggkkOMKtnG9xgJFs6fkWkwhtd-vemdvzHjhuH_5zNX8t6cuYrlc3MCLnV3YprgY9mwKrw-ySvCmi2RnaQTOHsQbtFzZj3FdqJ_O8Mxn1kv3y1X5y17hqpNTYA4Fai8GGZDPDE1zI66g6dKjN9gUYdVCfI-1tNyET_QxdVvV3DTExAC8AeM_ljV1huNJqxzCT-IJJUw"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Aura</span><span class="text-outline-variant font-body-sm text-body-sm px-space-xs">/</span><span class="font-label-md text-label-md text-on-surface-variant font-medium tracking-normal">Analytics</span></div><button aria-label="Profile" class="min-w-[44px] min-h-[44px] flex items-center justify-center -mr-space-xs rounded-full transition-opacity hover:opacity-80"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSd0C0ITsrsC-dZ8nAAzOqtisHQEorJ7pILZ_dERC8uc74sDcyo2LNQ2K0uxzw7V-0YnvqA-1RXbu1GSyNy3PBEaN4VzOVZnJV_WVkDbGzlDHDIpk5JizBcYz_NemEHDsVTtRDFyRRkw_Mg-d_KJeNVsLqE5_Jb5buWIRDhCg6AlOULrjLFxRyAcogPnsaG4FuQwUufbsd56KqsIwPlIgs3G8I7D2FI8CwdDU6a90K"/></button></div></header><main class="flex-1 flex flex-col relative w-full px-gutter pt-16 pb-24 bg-surface"><div class="flex flex-col w-full pb-10">
+<!-- Horizon Filter Tabs (Clean tonal pill container) -->
+<div class="w-full mb-space-lg">
+<div class="flex items-center p-1 bg-surface-container rounded-full max-w-sm mx-auto shadow-sm">
+<button class="horizon-tab flex-1 py-1.5 px-3 rounded-full font-label-md text-label-md text-center transition-all duration-200 bg-primary text-on-primary shadow-sm" data-tab="month" type="button">
+        This Month
+      </button>
+<button class="horizon-tab flex-1 py-1.5 px-3 rounded-full font-label-md text-label-md text-center transition-all duration-200 text-on-surface-variant hover:text-on-surface" data-tab="last" type="button">
+        Last Month
+      </button>
+<button class="horizon-tab flex-1 py-1.5 px-3 rounded-full font-label-md text-label-md text-center transition-all duration-200 text-on-surface-variant hover:text-on-surface" data-tab="ytd" type="button">
+        Year to Date
+      </button>
+</div>
+</div>
+<!-- Editorial Executive Insight Card -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md mb-space-lg shadow-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">Aura Synthesis</span>
+<span class="font-label-sm text-label-sm text-secondary">Updated Today</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface leading-tight mb-1">
+          You are spending 14% less on discretionary categories compared to September.
+        </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Consistent restraint across dining and bespoke leisure puts you 6 days ahead of your quarterly liquidity target.
+        </p>
+</div>
+</div>
+</div>
+<!-- Primary Metric: Spending vs Income & Daily Velocity -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md mb-space-lg shadow-sm">
+<div class="flex items-baseline justify-between mb-space-sm">
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Net Flow Balance</p>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mt-0.5">+$3,420.00</h2>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-primary bg-surface-container px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+          $114 / day
+        </span>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Burn Velocity</p>
+</div>
+</div>
+<!-- Comparative Visual Bars -->
+<div class="space-y-space-sm pt-space-xs">
+<div>
+<div class="flex justify-between items-center text-body-sm font-body-sm mb-1">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            Total Outflow
+          </span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">$3,480.00</span>
+</div>
+<div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 50.4%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center text-body-sm font-body-sm mb-1">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span>
+            Total Inflow
+          </span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">$6,900.00</span>
+</div>
+<div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary-fixed-dim rounded-full transition-all duration-500" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+<!-- Weekly Mini Sparkline Bar Chart -->
+<div class="mt-space-md pt-space-md bg-surface-container-low rounded-lg p-space-sm">
+<div class="flex justify-between items-center mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">30-Day Cadence</span>
+<span class="font-label-sm text-label-sm text-secondary">Avg. $798 / wk</span>
+</div>
+<div class="h-14 flex items-end justify-between gap-1.5 px-1 pt-1">
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-surface-container-highest rounded-t transition-all hover:bg-primary" style="height: 60%;"></div>
+<span class="font-label-sm text-label-sm text-secondary">W1</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-surface-container-highest rounded-t transition-all hover:bg-primary" style="height: 85%;"></div>
+<span class="font-label-sm text-label-sm text-secondary">W2</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-surface-container-highest rounded-t transition-all hover:bg-primary" style="height: 45%;"></div>
+<span class="font-label-sm text-label-sm text-secondary">W3</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end">
+<div class="w-full bg-primary rounded-t transition-all" style="height: 68%;"></div>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">W4</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Distribution Chart (Editorial Monochromatic Breakdown) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md mb-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Capital Distribution</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Category Weight</h3>
+</div>
+<span class="font-label-md text-label-md text-secondary">100% Accounted</span>
+</div>
+<!-- Architectural Segmented Bar Breakdown -->
+<div class="w-full mb-space-md">
+<div class="h-3 w-full flex rounded-full overflow-hidden bg-surface-container">
+<div class="h-full bg-primary transition-all duration-500" style="width: 48%;" title="Essentials 48%"></div>
+<div class="h-full bg-secondary transition-all duration-500" style="width: 26%;" title="Discretionary 26%"></div>
+<div class="h-full bg-secondary-fixed-dim transition-all duration-500" style="width: 26%;" title="Investments 26%"></div>
+</div>
+</div>
+<!-- Category Ledger Metrics -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Essentials</p>
+<p class="font-body-sm text-body-sm text-secondary">Shelter, nutrition, utilities</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md text-on-surface">$1,670.40</p>
+<p class="font-label-sm text-label-sm text-secondary">48%</p>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Discretionary</p>
+<p class="font-body-sm text-body-sm text-secondary">Leisure, experiences, travel</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md text-on-surface">$904.80</p>
+<p class="font-label-sm text-label-sm text-secondary">26%</p>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-secondary-fixed-dim"></span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Investments</p>
+<p class="font-body-sm text-body-sm text-secondary">Equities, venture allocations</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md text-on-surface">$904.80</p>
+<p class="font-label-sm text-label-sm text-secondary">26%</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Recurring Subscriptions Radar -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md mb-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Scheduled Commitments</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Active Subscriptions</h3>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md text-on-surface font-semibold">$224.00</span>
+<span class="font-body-sm text-body-sm text-secondary block">/ month</span>
+</div>
+</div>
+<div class="space-y-2">
+<!-- Subscription Item 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low transition-all">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface flex items-center justify-center shadow-sm">
+<span class="font-headline-sm text-headline-sm text-primary">F</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-medium">Figma Professional</p>
+<p class="font-body-sm text-body-sm text-secondary">Renews on Nov 04</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md text-on-surface font-semibold">$15.00</p>
+<span class="font-label-sm text-label-sm text-secondary">Monthly</span>
+</div>
+</div>
+<!-- Subscription Item 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low transition-all">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface flex items-center justify-center shadow-sm">
+<span class="font-headline-sm text-headline-sm text-primary">N</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-medium">Notion Unlimited</p>
+<p class="font-body-sm text-body-sm text-secondary">Renews on Nov 12</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md text-on-surface font-semibold">$10.00</p>
+<span class="font-label-sm text-label-sm text-secondary">Monthly</span>
+</div>
+</div>
+<!-- Subscription Item 3 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low transition-all">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface flex items-center justify-center shadow-sm">
+<span class="font-headline-sm text-headline-sm text-primary">S</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-medium">Substack Pro Ledger</p>
+<p class="font-body-sm text-body-sm text-secondary">Renews on Nov 19</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md text-on-surface font-semibold">$50.00</p>
+<span class="font-label-sm text-label-sm text-secondary">Annualized</span>
+</div>
+</div>
+<!-- Subscription Item 4 -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low transition-all">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">fitness_center</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-medium">Equinox Tier X</p>
+<p class="font-body-sm text-body-sm text-secondary">Renews on Nov 01</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md text-on-surface font-semibold">$149.00</p>
+<span class="font-label-sm text-label-sm text-secondary">Monthly</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Top Merchants List -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Concentration</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Top Payees</h3>
+</div>
+<button class="font-label-sm text-label-sm text-primary underline underline-offset-4 hover:opacity-75">
+        View All
+      </button>
+</div>
+<div class="divide-none space-y-space-xs">
+<div class="flex items-center justify-between py-2 px-1 hover:bg-surface-container-low rounded-lg transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-label-md text-label-md text-on-surface font-semibold">
+            1
+          </div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-medium">Bespoke Atelier NY</p>
+<p class="font-body-sm text-body-sm text-secondary">2 transactions · Luxury Goods</p>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">$840.00</span>
+</div>
+<div class="flex items-center justify-between py-2 px-1 hover:bg-surface-container-low rounded-lg transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-label-md text-label-md text-on-surface font-semibold">
+            2
+          </div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-medium">Whole Foods Market</p>
+<p class="font-body-sm text-body-sm text-secondary">8 transactions · Provisions</p>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">$620.30</span>
+</div>
+<div class="flex items-center justify-between py-2 px-1 hover:bg-surface-container-low rounded-lg transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-label-md text-label-md text-on-surface font-semibold">
+            3
+          </div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-medium">Equinox High Line</p>
+<p class="font-body-sm text-body-sm text-secondary">1 transaction · Wellness</p>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">$149.00</span>
+</div>
+<div class="flex items-center justify-between py-2 px-1 hover:bg-surface-container-low rounded-lg transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-label-md text-label-md text-on-surface font-semibold">
+            4
+          </div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-medium">Vanguard Index Trust</p>
+<p class="font-body-sm text-body-sm text-secondary">1 transaction · Recurring Transfer</p>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">$904.80</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const tabs = document.querySelectorAll('.horizon-tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          t.classList.add('text-on-surface-variant');
+        });
+        tab.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        tab.classList.remove('text-on-surface-variant');
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-sm"><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant transition-colors hover:text-on-surface" data-path="overview" href="#"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight">Overview</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant transition-colors hover:text-on-surface" data-path="add-expense" href="#"><span class="material-symbols-outlined text-[22px]">remove_circle_outline</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight">Expense</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs text-on-surface-variant transition-colors hover:text-on-surface" data-path="add-income" href="#"><span class="material-symbols-outlined text-[22px]">add_circle_outline</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight">Income</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-space-xs transition-colors text-primary font-semibold" data-path="analytics" href="#"><span class="material-symbols-outlined text-[22px]">insights</span><span class="font-label-sm text-label-sm mt-0.5 tracking-tight">Analytics</span></a></div></nav></body></html>
